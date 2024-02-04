@@ -1,0 +1,286 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Mulish', sans-serif;
+}
+
+#app{
+  display: grid;
+
+  grid-template-areas:
+  
+  "header"
+  "conteudo"
+  "footer";
+  
+  height: 100vh;
+
+  grid-template-rows: max-content 1fr max-content;
+}
+
+#app header {
+  grid-area: header;
+}
+
+#app div {
+  grid-area: conteudo;
+}
+
+#app footer {
+  grid-area: footer;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 25.5px;
+  padding: 12px 28px;
+  background-color: #065E7C;
+}
+
+form {
+  flex: 1;
+}
+
+#logomarca{
+  width: 4.0rem;
+  height: 4.0rem;
+}
+
+
+#avatar {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: none;
+}
+
+.input-wrapper label{
+  width: 1px;
+  height: 1px;
+
+  /* pesquisa o que essa parte está fazendo com a label */
+
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.6rem;
+  background-color: rgba(255, 255, 255, 0.20);
+  border-radius: 0.4rem;
+  border: 0px;
+  font-size: 1.6rem;
+  color:#FFF;
+  font-weight: 600;
+  outline: none;
+  height: 4.0rem;
+  line-height: 100%
+  }
+
+.input-wrapper input::placeholder {
+  opacity: 0.56;
+  color: #FFF;
+  font-size: 1.6rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #065E7C;
+  font-size: 1.6rem;
+  font-weight: 600;
+  height: 6.4rem;
+  padding: 1.6rem;
+  color: #FFF;
+}
+
+.container {
+  width: min(112rem, 100%);
+  margin: 0 auto;
+}
+
+body {
+  background-color: #065E7C;
+}
+
+#conteudo {
+  background-color: #FFF;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.1rem;
+}
+
+#conteudo main {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 2.6rem 0rem 2.2rem;
+}
+
+#cat {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 3.1rem;
+}
+
+#title {
+  gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.1rem;
+}
+
+#action {
+  display: flex;
+  gap: 1.2rem;
+}
+
+#action img {
+  height: 4.0rem;
+  width: 4.0rem;
+}
+
+#conteudo h1 {
+  color:#202024;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 3.84rem;
+}
+
+main p {
+  color: #121214;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.56rem;
+}
+
+#conteudo sidebar {
+  padding: 0rem 2.6rem 4.1rem 2.2rem;
+}
+
+#artigos{
+  margin-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+}
+
+.novos {
+  display: flex;
+  align-items: center; 
+  gap: 1.6rem;
+}
+
+.novos img {
+ width: 15.1rem;
+ height: 8.4rem;
+}
+
+sidebar h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 160%;
+}
+
+.about h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 160%;
+}
+
+.about p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+@media(min-width: 768px){
+
+  #conteudo{
+    flex-direction: row;
+    padding: 4.4rem 10.9rem 3.9rem;
+    justify-content: center;
+  }
+
+
+  #principal  {
+    max-width: 80.3rem;
+  }
+
+  .novos {
+    max-width: 38.4rem;
+  }
+
+  #principal img {
+    border-radius: 0.5rem;
+    object-fit: cover;
+    overflow: hidden;
+
+  }
+
+  #title {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+header{
+  --startY: -100%;
+  animation: move .2s ease-out;
+  ;
+}
+
+footer {
+  --startY: 100%;
+  animation: move .2s;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(var(--startY));
+  }
+}
+
+.novos, #action, #cat {
+  --delay: .4s;
+  animation: appear .4s var(--delay) backwards; 
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+img:hover{
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  /* o filter trabalha com edição do elemento */
+}
+
+.novos img:hover{
+  transform: scale(1.1);
+}
+
+
+
+
+
+/* adicionar as animações  na sidebar, footer, herader, img da sidebar, artigos*/
