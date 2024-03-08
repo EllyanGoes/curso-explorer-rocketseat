@@ -5,6 +5,10 @@
 		}
 	],
 	"settings": {
+<<<<<<< HEAD
 		"liveServer.settings.multiRootWorkspaceName": "Projeto 6"
+=======
+		"liveServer.settings.multiRootWorkspaceName": "Projeto 7"
+>>>>>>> 8d093c7000b31d829cf8a0aaf95774465888fb56
 	}
 }
