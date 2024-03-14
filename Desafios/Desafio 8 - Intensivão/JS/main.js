@@ -87,3 +87,5 @@ if (num % 2 != 0) {
 } else {
   alert(`o número ${num} não é impar`)
 }
+
+console.log('olá')
