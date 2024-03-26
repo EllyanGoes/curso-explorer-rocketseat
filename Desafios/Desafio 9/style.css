@@ -45,7 +45,6 @@ main {
 
 }
 
-
 button{
   font-family: "DM Sans";
   color: #FFF;
@@ -59,13 +58,21 @@ button{
   gap: 1.0rem;
 
   margin-top: 6.0rem;
+  cursor: pointer;
 }
 
+button:hover{
+  background: #ff9500c4;
+}
+
+.screen1 img{
+  cursor: pointer;
+}
 .screen2 img{
-  margin-top: 6.0rem;
+  margin-top: 4.0rem;
 }
 
-#sorte {
+#luck {
  
   font-family: "Dancing Script";
   font-size: 24px;
@@ -80,4 +87,104 @@ button{
   gap: 10px;
   margin-top: 1.7rem;
 
+}
+
+
+.slide-top-grow {
+	-webkit-animation: slide-top-grow 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-top-grow 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-top-grow {
+  0% {
+      -webkit-transform: translateY(160px) scale(0.20);
+              transform: translateY(160px) scale(0.20);
+  }
+  100% {
+      -webkit-transform: translateY(0) scale(1);
+              transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes slide-top-grow {
+  0% {
+      -webkit-transform: translateY(160px) scale(0.2);
+              transform: translateY(160px) scale(0.2);
+  }
+  100% {
+      -webkit-transform: translateY(0) scale(1);
+              transform: translateY(0) scale(1);
+  }
+}
+
+.shake-cookie:hover {
+	-webkit-animation: shake-cookie 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+	        animation: shake-cookie 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+}
+
+ @-webkit-keyframes shake-cookie {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+}
+@keyframes shake-cookie {
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+  }
+  10% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  80% {
+    -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+  }
+  90% {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+  }
 }
