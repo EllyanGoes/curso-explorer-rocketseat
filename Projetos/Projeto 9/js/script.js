@@ -15,6 +15,7 @@ import {calcularIMC, notaNumber } from './utils.js'
 const form = document.querySelector("form")
 const inputWeight = document.querySelector('#weight')
 const inputHeight = document.querySelector('#height')
+const input = document.querySelector('input')
 
 
 form.onsubmit = event => {
@@ -23,9 +24,9 @@ form.onsubmit = event => {
   const weight = inputWeight.value
   const height = inputHeight.value
 
-  const showAlertError = notaNumber(weight) || notaNumber(height)
+  const weightOrHightNotANumber = notaNumber(weight) || notaNumber(height)
 
-  if(showAlertError) {
+  if(weightOrHightNotANumber) {
     AlertError.open()
     return;
   }
@@ -39,3 +40,9 @@ form.onsubmit = event => {
   Modal.oepn()
 }
 
+
+//Fechar a janela de erro ao digitar no campo
+//Dica: evento é de nome input
+
+inputWeight.oninput = () => AlertError.close()
+inputHeight.oninput = () => AlertError.close()
