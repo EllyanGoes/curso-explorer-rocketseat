@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,15 +10,16 @@
     <link rel="stylesheet" href="./style.css" />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./js/main.js" defer></script>
+    
   </head>
   <body>
-    <script src="./script.js"></script>
     <div id="app">
-      <!-- <button id="toogle-mode">
-        <span>Ativar/Desativar Light toogle-mode</span>
+      <button id="toggle-mode" >
+        <span class="sr-only">Ativar/Desativar Light toogle-mode</span>
         <i class="ph ph-sun-dim"></i>
         <i class="ph ph-moon"></i>
-      </button> -->
+      </button>
 
       <section id="timer" class="flex">
         <span id="minutes">00</span>
@@ -27,12 +28,31 @@
       </section>
 
       <section id="controls" class="flex">
-        <button class="ph ph-play-circle"></button>
-        <button class="ph ph-pause-circle"></button>
-        <button class="ph ph-timer secondary"></button>
-        <button class="ph ph-stop-circle secondary"></button>
-        <button class="ph ph-speaker-none secondary"></button>
-        <button class="ph ph-speaker-high"></button>
+
+        <button class="ph ph-play-circle">
+          <span class="sr-only">Iniciar Contador </span>
+        </button>
+          
+        <button class="ph ph-pause-circle">
+          <span class="sr-only"> Pausar Contador </span>
+        </button>
+         
+        <button class="ph ph-timer secondary">
+          <span class="sr-only"> Ajustar o Contador </span>
+        </button>
+        
+        <button class="ph ph-stop-circle secondary">
+          <span class="sr-only"> Reiniciar o Contador</span>
+        </button>
+
+        <button class="ph ph-speaker-none secondary">
+          <span class="sr-only"> Iniciar música</span>
+        </button>
+
+        <button class="ph ph-speaker-high">
+          <span class="sr-only"> Parar música</span>
+        </button>
+
     </section>
     </div>
   </body>

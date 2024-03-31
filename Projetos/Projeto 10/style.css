@@ -10,8 +10,20 @@
 --text-color:hsla(var(--hue), 40%, 98%);
 --primary-color:hsla(var(--hue), 100%, 63%); 
 --controls-bg-color:hsla(var(--hue), 0%, 14%);
+--button-secundary: hsla(var(--hue), 40%, 98%);
 font-size: clamp(40%, 1% + 2vw, 62,5%);
 
+}
+
+html.light{
+  --text-color:hsla(var(--hue), 5%, 7%);
+  --bg-color:hsla(var(--hue), 40%, 98%);
+  --controls-bg-color:hsla(var(--hue), 0%, 14%);
+}
+
+html.light .ph-sun-dim,
+html:not(.light) .ph-moon{
+  display: none;
 }
 
 body{
@@ -55,6 +67,36 @@ button{
 }
 
 .secondary{
-  color: var(--text-color);
+  color: var(--button-secundary);
 }
 
+
+#toggle-mode{
+  position: absolute;
+  right: 3.2rem;
+  top:3.2rem;
+  line-height: 0;
+  color: var(--text-color)
+}
+
+.sr-only{
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0px;
+  appearance: none;
+}
+
+
+/* Controls */
+.running .ph-play-circle, 
+.running .ph-timer,
+.music-on .ph-speaker-none,
+html:not(.running) .ph-pause-circle, 
+html:not(.running) .ph-stop-circle,
+html:not(.music-on) .ph-speaker-high
+{display: none;}
