@@ -17,7 +17,7 @@ export function reset() {
 }
 
 export function set() {
-    
+    el.minutes.setAttribute('contentditable', true)
 }
 
 export function toggleMusic() {
