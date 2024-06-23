@@ -14,6 +14,8 @@
   --button-secondary: hsl(var(--hue), 40%, 98%);
 
   font-size: clamp(40%, 1% + 2vw, 62.5%);
+  /* Se a soma de 1% + 2vw for menor que 40% 
+  ele mantem 40% se for maior ele mantem 62,5% */
 }
 
 
@@ -63,6 +65,7 @@ place-content: center;
   justify-items: center;
 }
 
+/* Classe utilitária -> tem apenas um propósito */
 .flex {
   display: flex;
 }

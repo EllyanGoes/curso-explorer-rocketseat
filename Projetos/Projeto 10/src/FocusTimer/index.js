@@ -11,4 +11,5 @@ export function start(minutes, seconds){
     events.registerControls()
     events.setMinutes()
 
+    console.log(state)
 }

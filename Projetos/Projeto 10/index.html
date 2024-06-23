@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="pt-br" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Temporizador estilo pomodoro">
+    <!-- o meta descripition Auxilia os buscadores  -->
     <title>Focus Timer - Pomodoro</title>
 
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+    
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <link rel="stylesheet" href="./style.css">
+
     <script type="module" src="./src/main.js" defer></script>
 </head>
 <body>
@@ -18,6 +22,7 @@
             <i class="ph-bold ph-sun"></i>
             <i class="ph-bold ph-moon"></i>
         </button>
+        
         <section id="timer" class="flex">
             <span id="minutes">25</span>
             <span>:</span>
@@ -30,6 +35,7 @@
             class="ph ph-play-circle">
                 <span class="sr-only">Iniciar contador</span>
             </button>
+
             <button
             data-action="toggleRunning"
              class="ph ph-pause-circle">
