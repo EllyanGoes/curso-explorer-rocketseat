@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../Projetos/Projeto 10"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Desafio 10 - Polmodoro 2.0"
+	}
+}
